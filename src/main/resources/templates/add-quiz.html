@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Quiz</title>
+</head>
+<body>
+
+<h2>Add New Quiz</h2>
+
+<form action="/saveQuiz" method="post">
+
+    <label>Quiz Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Category:</label><br>
+    <input type="text" name="category" required><br><br>
+
+    <button type="submit">Save Quiz</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+
+<h2>Student Dashboard</h2>
+
+<h3>Available Quizzes</h3>
+
+<div th:if="${quizzes.isEmpty()}">
+    <p>No quizzes available.</p>
+</div>
+
+<div th:each="quiz : ${quizzes}">
+    <h4 th:text="${quiz.title}"></h4>
+
+    <a th:href="@{/quiz/{id}(id=${quiz.id})}">
+        <button>Start Quiz</button>
+    </a>
+
+    <hr>
+</div>
+
+</body>
+</html>

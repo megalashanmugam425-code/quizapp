@@ -1,0 +1,17 @@
+<form action="/admin" method="post">
+
+    <label>Username</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+
+</form>
+
+<p style="color:red;" th:text="${error}"></p>
+
+<br>
+
+<a href="/register">Register New Admin</a>

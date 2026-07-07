@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Question</title>
+</head>
+<body>
+
+<h2>Add New Question</h2>
+
+<form action="/saveQuestion" method="post">
+
+    <label>Question:</label><br>
+    <input type="text" name="question" required><br><br>
+
+    <label>Option A:</label><br>
+    <input type="text" name="optionA" required><br><br>
+
+    <label>Option B:</label><br>
+    <input type="text" name="optionB" required><br><br>
+
+    <label>Option C:</label><br>
+    <input type="text" name="optionC" required><br><br>
+
+    <label>Option D:</label><br>
+    <input type="text" name="optionD" required><br><br>
+
+    <label>Correct Answer:</label><br>
+    <input type="text" name="answer" required><br><br>
+
+    <button type="submit">Save Question</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">
+    <button>Back to Dashboard</button>
+</a>
+
+</body>
+</html>

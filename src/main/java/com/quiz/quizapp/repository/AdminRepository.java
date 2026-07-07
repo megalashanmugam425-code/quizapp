@@ -1,0 +1,13 @@
+package com.quiz.quizapp.repository;
+
+import com.quiz.quizapp.model.Admin;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+
+public interface AdminRepository extends JpaRepository<Admin, Long> {
+
+    Admin findByUsername(String username);
+
+    Optional<Admin> findByUsernameAndPassword(String username, String password);
+
+}

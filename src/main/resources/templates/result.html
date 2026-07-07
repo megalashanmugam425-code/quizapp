@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quiz Result</title>
+</head>
+<body>
+
+<h2>Quiz Completed!</h2>
+
+<h3>Your Score:</h3>
+
+<h1 th:text="${score}"></h1>
+
+<br>
+
+<a href="/student/dashboard">
+    <button>Back to Dashboard</button>
+</a>
+
+</body>
+</html>

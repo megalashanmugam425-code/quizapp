@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Questions</title>
+</head>
+<body>
+
+<h2>All Questions</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Question</th>
+        <th>Option A</th>
+        <th>Option B</th>
+        <th>Option C</th>
+        <th>Option D</th>
+        <th>Answer</th>
+    </tr>
+
+    <tr th:each="question : ${questions}">
+        <td th:text="${question.id}"></td>
+        <td th:text="${question.question}"></td>
+        <td th:text="${question.optionA}"></td>
+        <td th:text="${question.optionB}"></td>
+        <td th:text="${question.optionC}"></td>
+        <td th:text="${question.optionD}"></td>
+        <td th:text="${question.answer}"></td>
+    </tr>
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+    <button>Back to Dashboard</button>
+</a>
+
+</body>
+</html>

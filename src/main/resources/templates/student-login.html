@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Login</title>
+</head>
+<body>
+
+<h2>Student Login</h2>
+
+<form action="/student/login" method="post">
+
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+
+</form>
+
+<p style="color:red;" th:text="${error}"></p>
+
+<br>
+
+<a href="/student/register">Create New Student Account</a>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Question</title>
+</head>
+<body>
+
+<h2>Edit Question</h2>
+
+<form action="/updateQuestion" method="post">
+
+    <input type="hidden" name="id" th:value="${question.id}">
+
+    <label>Question</label><br>
+    <input type="text" name="question"
+           th:value="${question.question}" required><br><br>
+
+    <label>Option A</label><br>
+    <input type="text" name="optionA"
+           th:value="${question.optionA}" required><br><br>
+
+    <label>Option B</label><br>
+    <input type="text" name="optionB"
+           th:value="${question.optionB}" required><br><br>
+
+    <label>Option C</label><br>
+    <input type="text" name="optionC"
+           th:value="${question.optionC}" required><br><br>
+
+    <label>Option D</label><br>
+    <input type="text" name="optionD"
+           th:value="${question.optionD}" required><br><br>
+
+    <label>Correct Answer</label><br>
+    <input type="text" name="answer"
+           th:value="${question.answer}" required><br><br>
+
+    <button type="submit">Update Question</button>
+
+</form>
+
+</body>
+</html>
